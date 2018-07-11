@@ -1,0 +1,9 @@
+/Users/hal/DevelopmentSandbox/TridentTools/trident-can-opener/Vendor/snappy-build/CMakeFiles/install/strip.dir
+/Users/hal/DevelopmentSandbox/TridentTools/trident-can-opener/Vendor/snappy-build/CMakeFiles/install.dir
+/Users/hal/DevelopmentSandbox/TridentTools/trident-can-opener/Vendor/snappy-build/CMakeFiles/list_install_components.dir
+/Users/hal/DevelopmentSandbox/TridentTools/trident-can-opener/Vendor/snappy-build/CMakeFiles/rebuild_cache.dir
+/Users/hal/DevelopmentSandbox/TridentTools/trident-can-opener/Vendor/snappy-build/CMakeFiles/edit_cache.dir
+/Users/hal/DevelopmentSandbox/TridentTools/trident-can-opener/Vendor/snappy-build/CMakeFiles/install/local.dir
+/Users/hal/DevelopmentSandbox/TridentTools/trident-can-opener/Vendor/snappy-build/CMakeFiles/snappy.dir
+/Users/hal/DevelopmentSandbox/TridentTools/trident-can-opener/Vendor/snappy-build/CMakeFiles/test.dir
+/Users/hal/DevelopmentSandbox/TridentTools/trident-can-opener/Vendor/snappy-build/CMakeFiles/snappy_unittest.dir
