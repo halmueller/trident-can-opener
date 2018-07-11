@@ -1,0 +1,6 @@
+[submodule "snappy"]
+	path = snappy
+	url = https://github.com/google/snappy
+[submodule "forestdb"]
+	path = forestdb
+	url = https://github.com/couchbase/forestdb
