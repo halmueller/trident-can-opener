@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BA37D4220F6D83400C83A41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA37D4120F6D83400C83A41 /* AppDelegate.swift */; };
+		2BA37D4420F6D83400C83A41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA37D4320F6D83400C83A41 /* ViewController.swift */; };
+		2BA37D4620F6D83500C83A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA37D4520F6D83500C83A41 /* Assets.xcassets */; };
+		2BA37D4920F6D83500C83A41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA37D4720F6D83500C83A41 /* Main.storyboard */; };
+		2BA37D5520F6D83600C83A41 /* Dancing_TridentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA37D5420F6D83600C83A41 /* Dancing_TridentTests.swift */; };
+		2BA37D6020F6D83600C83A41 /* Dancing_TridentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA37D5F20F6D83600C83A41 /* Dancing_TridentUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BA37D5120F6D83600C83A41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA37D3620F6D83400C83A41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA37D3D20F6D83400C83A41;
+			remoteInfo = "Dancing Trident";
+		};
+		2BA37D5C20F6D83600C83A41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA37D3620F6D83400C83A41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA37D3D20F6D83400C83A41;
+			remoteInfo = "Dancing Trident";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BA37D3E20F6D83400C83A41 /* Dancing Trident.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dancing Trident.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA37D4120F6D83400C83A41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BA37D4320F6D83400C83A41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BA37D4520F6D83500C83A41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BA37D4820F6D83500C83A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BA37D4A20F6D83500C83A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BA37D4B20F6D83500C83A41 /* Dancing_Trident.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dancing_Trident.entitlements; sourceTree = "<group>"; };
+		2BA37D5020F6D83600C83A41 /* Dancing TridentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dancing TridentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA37D5420F6D83600C83A41 /* Dancing_TridentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dancing_TridentTests.swift; sourceTree = "<group>"; };
+		2BA37D5620F6D83600C83A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BA37D5B20F6D83600C83A41 /* Dancing TridentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dancing TridentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA37D5F20F6D83600C83A41 /* Dancing_TridentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dancing_TridentUITests.swift; sourceTree = "<group>"; };
+		2BA37D6120F6D83600C83A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BA37D3B20F6D83400C83A41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA37D4D20F6D83600C83A41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA37D5820F6D83600C83A41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BA37D3520F6D83400C83A41 = {
+			isa = PBXGroup;
+			children = (
+				2BA37D4020F6D83400C83A41 /* Dancing Trident */,
+				2BA37D5320F6D83600C83A41 /* Dancing TridentTests */,
+				2BA37D5E20F6D83600C83A41 /* Dancing TridentUITests */,
+				2BA37D3F20F6D83400C83A41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BA37D3F20F6D83400C83A41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BA37D3E20F6D83400C83A41 /* Dancing Trident.app */,
+				2BA37D5020F6D83600C83A41 /* Dancing TridentTests.xctest */,
+				2BA37D5B20F6D83600C83A41 /* Dancing TridentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BA37D4020F6D83400C83A41 /* Dancing Trident */ = {
+			isa = PBXGroup;
+			children = (
+				2BA37D4120F6D83400C83A41 /* AppDelegate.swift */,
+				2BA37D4320F6D83400C83A41 /* ViewController.swift */,
+				2BA37D4520F6D83500C83A41 /* Assets.xcassets */,
+				2BA37D4720F6D83500C83A41 /* Main.storyboard */,
+				2BA37D4A20F6D83500C83A41 /* Info.plist */,
+				2BA37D4B20F6D83500C83A41 /* Dancing_Trident.entitlements */,
+			);
+			path = "Dancing Trident";
+			sourceTree = "<group>";
+		};
+		2BA37D5320F6D83600C83A41 /* Dancing TridentTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BA37D5420F6D83600C83A41 /* Dancing_TridentTests.swift */,
+				2BA37D5620F6D83600C83A41 /* Info.plist */,
+			);
+			path = "Dancing TridentTests";
+			sourceTree = "<group>";
+		};
+		2BA37D5E20F6D83600C83A41 /* Dancing TridentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BA37D5F20F6D83600C83A41 /* Dancing_TridentUITests.swift */,
+				2BA37D6120F6D83600C83A41 /* Info.plist */,
+			);
+			path = "Dancing TridentUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BA37D3D20F6D83400C83A41 /* Dancing Trident */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA37D6420F6D83600C83A41 /* Build configuration list for PBXNativeTarget "Dancing Trident" */;
+			buildPhases = (
+				2BA37D3A20F6D83400C83A41 /* Sources */,
+				2BA37D3B20F6D83400C83A41 /* Frameworks */,
+				2BA37D3C20F6D83400C83A41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dancing Trident";
+			productName = "Dancing Trident";
+			productReference = 2BA37D3E20F6D83400C83A41 /* Dancing Trident.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BA37D4F20F6D83600C83A41 /* Dancing TridentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA37D6720F6D83600C83A41 /* Build configuration list for PBXNativeTarget "Dancing TridentTests" */;
+			buildPhases = (
+				2BA37D4C20F6D83600C83A41 /* Sources */,
+				2BA37D4D20F6D83600C83A41 /* Frameworks */,
+				2BA37D4E20F6D83600C83A41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BA37D5220F6D83600C83A41 /* PBXTargetDependency */,
+			);
+			name = "Dancing TridentTests";
+			productName = "Dancing TridentTests";
+			productReference = 2BA37D5020F6D83600C83A41 /* Dancing TridentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BA37D5A20F6D83600C83A41 /* Dancing TridentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA37D6A20F6D83600C83A41 /* Build configuration list for PBXNativeTarget "Dancing TridentUITests" */;
+			buildPhases = (
+				2BA37D5720F6D83600C83A41 /* Sources */,
+				2BA37D5820F6D83600C83A41 /* Frameworks */,
+				2BA37D5920F6D83600C83A41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BA37D5D20F6D83600C83A41 /* PBXTargetDependency */,
+			);
+			name = "Dancing TridentUITests";
+			productName = "Dancing TridentUITests";
+			productReference = 2BA37D5B20F6D83600C83A41 /* Dancing TridentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BA37D3620F6D83400C83A41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Hal Mueller";
+				TargetAttributes = {
+					2BA37D3D20F6D83400C83A41 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					2BA37D4F20F6D83600C83A41 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 2BA37D3D20F6D83400C83A41;
+					};
+					2BA37D5A20F6D83600C83A41 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 2BA37D3D20F6D83400C83A41;
+					};
+				};
+			};
+			buildConfigurationList = 2BA37D3920F6D83400C83A41 /* Build configuration list for PBXProject "Dancing Trident" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BA37D3520F6D83400C83A41;
+			productRefGroup = 2BA37D3F20F6D83400C83A41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BA37D3D20F6D83400C83A41 /* Dancing Trident */,
+				2BA37D4F20F6D83600C83A41 /* Dancing TridentTests */,
+				2BA37D5A20F6D83600C83A41 /* Dancing TridentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BA37D3C20F6D83400C83A41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA37D4620F6D83500C83A41 /* Assets.xcassets in Resources */,
+				2BA37D4920F6D83500C83A41 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA37D4E20F6D83600C83A41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA37D5920F6D83600C83A41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BA37D3A20F6D83400C83A41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA37D4420F6D83400C83A41 /* ViewController.swift in Sources */,
+				2BA37D4220F6D83400C83A41 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA37D4C20F6D83600C83A41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA37D5520F6D83600C83A41 /* Dancing_TridentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA37D5720F6D83600C83A41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA37D6020F6D83600C83A41 /* Dancing_TridentUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BA37D5220F6D83600C83A41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA37D3D20F6D83400C83A41 /* Dancing Trident */;
+			targetProxy = 2BA37D5120F6D83600C83A41 /* PBXContainerItemProxy */;
+		};
+		2BA37D5D20F6D83600C83A41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA37D3D20F6D83400C83A41 /* Dancing Trident */;
+			targetProxy = 2BA37D5C20F6D83600C83A41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BA37D4720F6D83500C83A41 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BA37D4820F6D83500C83A41 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BA37D6220F6D83600C83A41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BA37D6320F6D83600C83A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2BA37D6520F6D83600C83A41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Dancing Trident/Dancing_Trident.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TW8SJXYFP5;
+				INFOPLIST_FILE = "Dancing Trident/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilegeographics.Dancing-Trident";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		2BA37D6620F6D83600C83A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Dancing Trident/Dancing_Trident.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TW8SJXYFP5;
+				INFOPLIST_FILE = "Dancing Trident/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilegeographics.Dancing-Trident";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		2BA37D6820F6D83600C83A41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TW8SJXYFP5;
+				INFOPLIST_FILE = "Dancing TridentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilegeographics.Dancing-TridentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dancing Trident.app/Contents/MacOS/Dancing Trident";
+			};
+			name = Debug;
+		};
+		2BA37D6920F6D83600C83A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TW8SJXYFP5;
+				INFOPLIST_FILE = "Dancing TridentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilegeographics.Dancing-TridentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dancing Trident.app/Contents/MacOS/Dancing Trident";
+			};
+			name = Release;
+		};
+		2BA37D6B20F6D83600C83A41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TW8SJXYFP5;
+				INFOPLIST_FILE = "Dancing TridentUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilegeographics.Dancing-TridentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Dancing Trident";
+			};
+			name = Debug;
+		};
+		2BA37D6C20F6D83600C83A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TW8SJXYFP5;
+				INFOPLIST_FILE = "Dancing TridentUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mobilegeographics.Dancing-TridentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = "Dancing Trident";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BA37D3920F6D83400C83A41 /* Build configuration list for PBXProject "Dancing Trident" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA37D6220F6D83600C83A41 /* Debug */,
+				2BA37D6320F6D83600C83A41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA37D6420F6D83600C83A41 /* Build configuration list for PBXNativeTarget "Dancing Trident" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA37D6520F6D83600C83A41 /* Debug */,
+				2BA37D6620F6D83600C83A41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA37D6720F6D83600C83A41 /* Build configuration list for PBXNativeTarget "Dancing TridentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA37D6820F6D83600C83A41 /* Debug */,
+				2BA37D6920F6D83600C83A41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA37D6A20F6D83600C83A41 /* Build configuration list for PBXNativeTarget "Dancing TridentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA37D6B20F6D83600C83A41 /* Debug */,
+				2BA37D6C20F6D83600C83A41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BA37D3620F6D83400C83A41 /* Project object */;
+}
