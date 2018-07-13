@@ -15,6 +15,7 @@
 		2B23E3B620F948420079EDAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B23E3B420F948420079EDAE /* Main.storyboard */; };
 		2B23E3C220F948420079EDAE /* Dancing_TridentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3C120F948420079EDAE /* Dancing_TridentTests.swift */; };
 		2B23E3CD20F948420079EDAE /* Dancing_TridentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3CC20F948420079EDAE /* Dancing_TridentUITests.swift */; };
+		2B23E3DB20F971280079EDAE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B23E3DA20F971280079EDAE /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		2B23E3C820F948420079EDAE /* Dancing TridentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dancing TridentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B23E3CC20F948420079EDAE /* Dancing_TridentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dancing_TridentUITests.swift; sourceTree = "<group>"; };
 		2B23E3CE20F948420079EDAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B23E3DA20F971280079EDAE /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				2B23E3AB20F948420079EDAE /* ViewController.swift */,
 				2B23E3AD20F948420079EDAE /* Document.swift */,
 				2B23E3B220F948420079EDAE /* Assets.xcassets */,
+				2B23E3DA20F971280079EDAE /* art.scnassets */,
 				2B23E3B420F948420079EDAE /* Main.storyboard */,
 				2B23E3B720F948420079EDAE /* Info.plist */,
 				2B23E3B820F948420079EDAE /* Dancing_Trident.entitlements */,
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B23E3B320F948420079EDAE /* Assets.xcassets in Resources */,
+				2B23E3DB20F971280079EDAE /* art.scnassets in Resources */,
 				2B23E3B620F948420079EDAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
