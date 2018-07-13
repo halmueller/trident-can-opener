@@ -228,7 +228,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2BA37D3920F6D83400C83A41 /* Build configuration list for PBXProject "Dancing Trident" */;
+			buildConfigurationList = 2BA37D3920F6D83400C83A41 /* Build configuration list for PBXProject "Dancing Trident first try" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -562,7 +562,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2BA37D3920F6D83400C83A41 /* Build configuration list for PBXProject "Dancing Trident" */ = {
+		2BA37D3920F6D83400C83A41 /* Build configuration list for PBXProject "Dancing Trident first try" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BA37D6220F6D83600C83A41 /* Debug */,
