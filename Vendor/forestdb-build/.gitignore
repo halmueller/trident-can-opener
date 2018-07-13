@@ -1,2 +1,5 @@
-## from the Cmake-created .xcodeproj
+## from the Cmake-created .xcodeproj, which stores build products in this build folder
 ForestDB.build
+Debug
+Release
+*.xctestrun
