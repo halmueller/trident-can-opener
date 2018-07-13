@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:Dancing Trident/Dancing Trident.xcodeproj">
+      location = "container:/Users/hal/DevelopmentSandbox/TridentTools/trident-can-opener/Dancing Trident/Dancing Trident first try.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Dancing Trident/../Vendor/forestdb-build/ForestDB.xcodeproj">
