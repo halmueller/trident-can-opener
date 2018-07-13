@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BA2329A20F6E8E900996C08 /* forestdb_dump in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BA2329820F6E6B900996C08 /* forestdb_dump */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2BA2329C20F6EF5100996C08 /* CommandLineCanOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2329B20F6EF5100996C08 /* CommandLineCanOpener.swift */; };
 		2BA37D4220F6D83400C83A41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA37D4120F6D83400C83A41 /* AppDelegate.swift */; };
 		2BA37D4420F6D83400C83A41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA37D4320F6D83400C83A41 /* ViewController.swift */; };
 		2BA37D4620F6D83500C83A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA37D4520F6D83500C83A41 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		2BA2329820F6E6B900996C08 /* forestdb_dump */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = forestdb_dump; path = "../../Vendor/forestdb-build/Release/forestdb_dump"; sourceTree = "<group>"; };
+		2BA2329B20F6EF5100996C08 /* CommandLineCanOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineCanOpener.swift; sourceTree = "<group>"; };
 		2BA37D3E20F6D83400C83A41 /* Dancing Trident.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dancing Trident.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA37D4120F6D83400C83A41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BA37D4320F6D83400C83A41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				2BA37D4120F6D83400C83A41 /* AppDelegate.swift */,
 				2BA37D4320F6D83400C83A41 /* ViewController.swift */,
+				2BA2329B20F6EF5100996C08 /* CommandLineCanOpener.swift */,
 				2BA37D4520F6D83500C83A41 /* Assets.xcassets */,
 				2BA37D4720F6D83500C83A41 /* Main.storyboard */,
 				2BA37D4A20F6D83500C83A41 /* Info.plist */,
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA2329C20F6EF5100996C08 /* CommandLineCanOpener.swift in Sources */,
 				2BA37D4420F6D83400C83A41 /* ViewController.swift in Sources */,
 				2BA37D4220F6D83400C83A41 /* AppDelegate.swift in Sources */,
 			);

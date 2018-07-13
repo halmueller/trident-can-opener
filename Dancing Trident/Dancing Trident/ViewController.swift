@@ -17,19 +17,8 @@ class ViewController: NSViewController {
     }
 
     @IBAction func tryIt(_ sender: Any) {
-        if let path = Bundle.main.path(forAuxiliaryExecutable: "bin/forestdb_dump") {
-            print(path)
-            let executableURL = URL(fileURLWithPath: path)
-            let option = "--hex-body"
-            let sampleDBFile = "/Users/hal/DevelopmentSandbox/TridentTools/files/data/s_da7b5973-9f0e-4ced-a138-b024eee51be7.cblite2/db.forest.0"
-            do { try
-                Process.run(executableURL, arguments: [option, sampleDBFile]) { (proc) in
-                    print(proc)
-                }
-            } catch {
-                print("oops")
-            }
-        }
+        let canOpener = CommandLineCanOpener()
+        canOpener.tryIt()
     }
 
     override var representedObject: Any? {
