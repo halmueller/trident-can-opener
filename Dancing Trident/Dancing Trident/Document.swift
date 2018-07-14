@@ -57,6 +57,7 @@ class Document: NSPersistentDocument {
                     }
                 }
             }
+            try self.managedObjectContext?.save()
         } catch {
             Swift.print("Didn't work")
         }
