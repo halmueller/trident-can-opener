@@ -708,10 +708,10 @@
             <objects>
                 <tabViewController id="h1N-LT-BIL" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem id="Jeo-Uz-vl0"/>
-                        <tabViewItem id="BS8-D0-WQY"/>
                         <tabViewItem id="GVn-77-BgZ"/>
                         <tabViewItem id="nPd-K2-hXP"/>
+                        <tabViewItem id="lAW-GA-aTO"/>
+                        <tabViewItem id="cpW-ac-2lQ"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="AVw-2N-BLu">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -723,10 +723,10 @@
                     </tabView>
                     <connections>
                         <outlet property="tabView" destination="AVw-2N-BLu" id="gp0-C4-bEX"/>
-                        <segue destination="p4X-ei-V5a" kind="relationship" relationship="tabItems" id="eQR-dz-Ikp"/>
-                        <segue destination="5mA-42-gIN" kind="relationship" relationship="tabItems" id="R9d-jy-YSe"/>
                         <segue destination="LrX-5r-AE7" kind="relationship" relationship="tabItems" id="wHR-vF-P60"/>
                         <segue destination="5gI-5U-AMq" kind="relationship" relationship="tabItems" id="oCQ-AI-0q0"/>
+                        <segue destination="p4X-ei-V5a" kind="relationship" relationship="tabItems" id="Xyb-wr-PP6"/>
+                        <segue destination="5mA-42-gIN" kind="relationship" relationship="tabItems" id="0Lj-TI-IEt"/>
                     </connections>
                 </tabViewController>
                 <customObject id="Z2D-Qc-agg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -930,7 +930,7 @@
                 </arrayController>
                 <userDefaultsController id="Ok4-nV-zBa"/>
             </objects>
-            <point key="canvasLocation" x="270" y="1089"/>
+            <point key="canvasLocation" x="59" y="1259"/>
         </scene>
         <!--Dance-->
         <scene sceneID="YNR-V0-app">
@@ -1059,7 +1059,7 @@
                 </arrayController>
                 <userDefaultsController id="NjU-rv-dHr"/>
             </objects>
-            <point key="canvasLocation" x="270" y="1089"/>
+            <point key="canvasLocation" x="886" y="1089"/>
         </scene>
     </scenes>
 </document>

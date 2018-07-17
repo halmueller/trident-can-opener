@@ -31,7 +31,7 @@ class Document: NSPersistentDocument {
         Swift.print("after", self.windowControllers)
     }
 
-     func zaddWindowController(_ windowController: NSWindowController) {
+     override func addWindowController(_ windowController: NSWindowController) {
         super.addWindowController(windowController)
         Swift.print(windowController.contentViewController)
         for childVC in windowController.contentViewController!.childViewControllers {

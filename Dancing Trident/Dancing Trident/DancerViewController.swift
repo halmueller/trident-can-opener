@@ -16,7 +16,7 @@ class DancerViewController: NSViewController {
     @IBOutlet weak var scnView: SCNView!
     
     @IBAction func beginReplay(_ sender: Any) {
-        print(self.managedObjectContext)
+        print(self.managedObjectContext as Any)
     }
     
     override func viewDidLoad() {
