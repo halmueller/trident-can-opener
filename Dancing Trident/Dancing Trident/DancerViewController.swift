@@ -14,6 +14,7 @@ class DancerViewController: NSViewController {
 
     var managedObjectContext: NSManagedObjectContext? = nil
     var depthFRC: NSFetchedResultsController<Depth>? = nil
+    var attitudeFRC: NSFetchedResultsController<Attitude>? = nil
     var tridentNode: SCNNode? = nil
 
     @IBOutlet weak var scnView: SCNView!
@@ -21,7 +22,9 @@ class DancerViewController: NSViewController {
     @IBAction func beginReplay(_ sender: Any) {
         print(self.managedObjectContext as Any)
         let depthFetchRequest = NSFetchRequest<Depth>(entityName: "Depth")
+        let attitudeFetchRequest = NSFetchRequest<Attitude>(entityName: "Attitude")
         let timestampSD = NSSortDescriptor(key: "timestamp", ascending: true)
+
         depthFetchRequest.sortDescriptors = [timestampSD]
         depthFRC = NSFetchedResultsController(fetchRequest: depthFetchRequest, managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: "DancerViewControllerDepth")
         do {
@@ -29,24 +32,45 @@ class DancerViewController: NSViewController {
         } catch  {
             print("depthFRC fetch failed")
         }
-        try! depthFRC?.performFetch()
+
+        attitudeFetchRequest.sortDescriptors = [timestampSD]
+        attitudeFRC = NSFetchedResultsController(fetchRequest: attitudeFetchRequest, managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: "DancerViewControllerAttitude")
+        do {
+            try attitudeFRC?.performFetch()
+        } catch  {
+            print("attitudeFRC fetch failed")
+        }
+
         var position = tridentNode!.position
         var currentSeconds = depthFRC!.fetchedObjects![0].timestamp!.timeIntervalSince1970
-        var actions: [SCNAction] = []
+        var depthActions: [SCNAction] = []
         for depth in (depthFRC?.fetchedObjects)! {
-//            print(depth.meters, depth.timestamp)
+            //            print(depth.meters, depth.timestamp)
             let newSeconds = depth.timestamp!.timeIntervalSince1970
             let interval = newSeconds - currentSeconds
             currentSeconds = newSeconds
             position.y = -1.0 * CGFloat(depth.meters)
             print(interval, position)
             let animation = SCNAction.move(to: position, duration: interval)
-            actions.append(animation)
-//            tridentNode.animate
-//            tridentNode!.simdPosition = position
+            depthActions.append(animation)
         }
-        let sequence = SCNAction.sequence(actions)
-        tridentNode?.runAction(sequence)
+        let depthsSequence = SCNAction.sequence(depthActions)
+
+        currentSeconds = attitudeFRC!.fetchedObjects![0].timestamp!.timeIntervalSince1970
+        var attitudeActions: [SCNAction] = []
+        for attitude in (attitudeFRC?.fetchedObjects)! {
+            //            print(depth.meters, depth.timestamp)
+            let newSeconds = attitude.timestamp!.timeIntervalSince1970
+            let interval = newSeconds - currentSeconds
+            currentSeconds = newSeconds
+            print(interval, attitude)
+            let animation = SCNAction.rotateTo(x: CGFloat(attitude.roll), y: CGFloat(attitude.yaw), z: CGFloat(attitude.pitch), duration: interval, usesShortestUnitArc: true)
+            attitudeActions.append(animation)
+        }
+        let attitudesSequence = SCNAction.sequence(attitudeActions)
+
+        let group = SCNAction.group([depthsSequence, attitudesSequence])
+        tridentNode?.runAction(group)
     }
 
     override func viewDidLoad() {
