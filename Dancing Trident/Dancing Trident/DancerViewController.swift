@@ -11,9 +11,12 @@ import SceneKit
 
 class DancerViewController: NSViewController {
 
+    var managedObjectContext: NSManagedObjectContext? = nil
+
     @IBOutlet weak var scnView: SCNView!
     
     @IBAction func beginReplay(_ sender: Any) {
+        print(self.managedObjectContext)
     }
     
     override func viewDidLoad() {

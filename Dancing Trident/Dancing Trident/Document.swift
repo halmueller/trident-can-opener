@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import CoreData
 
 class Document: NSPersistentDocument {
 
@@ -24,11 +25,29 @@ class Document: NSPersistentDocument {
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
         let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+        Swift.print("before", self.windowControllers)
         let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")) as! NSWindowController
         self.addWindowController(windowController)
-        Swift.print(self.windowControllers)
+        Swift.print("after", self.windowControllers)
     }
 
+     func zaddWindowController(_ windowController: NSWindowController) {
+        super.addWindowController(windowController)
+        Swift.print(windowController.contentViewController)
+        for childVC in windowController.contentViewController!.childViewControllers {
+            if let summaryVC = childVC as? SummaryViewController {
+                summaryVC.managedObjectContext = self.managedObjectContext
+            }
+            else if let dataVC = childVC as? DataViewController {
+                dataVC.managedObjectContext = self.managedObjectContext
+            }
+            else if let dancerVC = childVC as? DancerViewController {
+                dancerVC.managedObjectContext = self.managedObjectContext
+            }
+            Swift.print(childVC)
+        }
+    }
+    
     @IBAction func importDefaultSSV(_ sender: Any) {
         defaultSSVURL = URL(fileURLWithPath: "/Users/hal/DevelopmentSandbox/TridentTools/files/data/s_1cd5aee2-dcba-4aea-83af-43272574b5a6.ssv")
 
