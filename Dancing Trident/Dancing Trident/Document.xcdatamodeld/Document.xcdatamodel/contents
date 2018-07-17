@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="DepthReading" representedClassName="DepthReading" syncable="YES" codeGenerationType="class">
+    <entity name="Attitude" representedClassName="Attitude" syncable="YES" codeGenerationType="class">
+        <attribute name="pitch" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="roll" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="yaw" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Depth" representedClassName="Depth" syncable="YES" codeGenerationType="class">
         <attribute name="meters" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
-    <entity name="WaterTemperatureReading" representedClassName="WaterTemperatureReading" syncable="YES" codeGenerationType="class">
+    <entity name="Pressure" representedClassName="Pressure" syncable="YES" codeGenerationType="class">
+        <attribute name="degreesCelsius" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <entity name="Quaternion" representedClassName="WaterTemperatureReading" syncable="YES" codeGenerationType="class">
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="w" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="x" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="y" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="z" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Temperature" representedClassName="Temperature" syncable="YES" codeGenerationType="class">
         <attribute name="degreesCelsius" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DepthReading" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="WaterTemperatureReading" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Depth" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Temperature" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Pressure" positionX="-27" positionY="27" width="128" height="75"/>
+        <element name="Attitude" positionX="9" positionY="81" width="128" height="105"/>
+        <element name="Quaternion" positionX="-18" positionY="72" width="128" height="120"/>
     </elements>
 </model>

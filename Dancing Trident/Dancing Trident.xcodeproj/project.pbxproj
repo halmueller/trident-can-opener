@@ -17,6 +17,8 @@
 		2B23E3CD20F948420079EDAE /* Dancing_TridentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3CC20F948420079EDAE /* Dancing_TridentUITests.swift */; };
 		2B23E3DB20F971280079EDAE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B23E3DA20F971280079EDAE /* art.scnassets */; };
 		2B23E3DF20F995DD0079EDAE /* ManagedObject+Insertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3DE20F995DD0079EDAE /* ManagedObject+Insertion.swift */; };
+		2B23E3E320FD65AC0079EDAE /* Temperature+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3E220FD65AC0079EDAE /* Temperature+Methods.swift */; };
+		2B23E3E520FD65D30079EDAE /* Depth+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3E420FD65D30079EDAE /* Depth+Methods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		2B23E3CE20F948420079EDAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B23E3DA20F971280079EDAE /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		2B23E3DE20F995DD0079EDAE /* ManagedObject+Insertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedObject+Insertion.swift"; sourceTree = "<group>"; };
+		2B23E3E220FD65AC0079EDAE /* Temperature+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Temperature+Methods.swift"; sourceTree = "<group>"; };
+		2B23E3E420FD65D30079EDAE /* Depth+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Depth+Methods.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +111,13 @@
 				2B23E3A920F948420079EDAE /* AppDelegate.swift */,
 				2B23E3AB20F948420079EDAE /* ViewController.swift */,
 				2B23E3AD20F948420079EDAE /* Document.swift */,
-				2B23E3B220F948420079EDAE /* Assets.xcassets */,
-				2B23E3DA20F971280079EDAE /* art.scnassets */,
+				2B23E3E020FD5F350079EDAE /* Art */,
 				2B23E3B420F948420079EDAE /* Main.storyboard */,
-				2B23E3B720F948420079EDAE /* Info.plist */,
-				2B23E3B820F948420079EDAE /* Dancing_Trident.entitlements */,
+				2B23E3E120FD5F5C0079EDAE /* Other */,
 				2B23E3AF20F948420079EDAE /* Document.xcdatamodeld */,
 				2B23E3DE20F995DD0079EDAE /* ManagedObject+Insertion.swift */,
+				2B23E3E220FD65AC0079EDAE /* Temperature+Methods.swift */,
+				2B23E3E420FD65D30079EDAE /* Depth+Methods.swift */,
 			);
 			path = "Dancing Trident";
 			sourceTree = "<group>";
@@ -134,6 +138,24 @@
 				2B23E3CE20F948420079EDAE /* Info.plist */,
 			);
 			path = "Dancing TridentUITests";
+			sourceTree = "<group>";
+		};
+		2B23E3E020FD5F350079EDAE /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				2B23E3B220F948420079EDAE /* Assets.xcassets */,
+				2B23E3DA20F971280079EDAE /* art.scnassets */,
+			);
+			name = Art;
+			sourceTree = "<group>";
+		};
+		2B23E3E120FD5F5C0079EDAE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2B23E3B720F948420079EDAE /* Info.plist */,
+				2B23E3B820F948420079EDAE /* Dancing_Trident.entitlements */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,9 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B23E3E520FD65D30079EDAE /* Depth+Methods.swift in Sources */,
 				2B23E3B120F948420079EDAE /* Document.xcdatamodeld in Sources */,
 				2B23E3AC20F948420079EDAE /* ViewController.swift in Sources */,
 				2B23E3DF20F995DD0079EDAE /* ManagedObject+Insertion.swift in Sources */,
+				2B23E3E320FD65AC0079EDAE /* Temperature+Methods.swift in Sources */,
 				2B23E3AA20F948420079EDAE /* AppDelegate.swift in Sources */,
 				2B23E3AE20F948420079EDAE /* Document.swift in Sources */,
 			);

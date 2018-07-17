@@ -803,7 +803,7 @@
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="VGX-yT-kCJ"/>
-                <arrayController mode="entity" entityName="DepthReading" automaticallyPreparesContent="YES" id="vaD-x1-Ww0">
+                <arrayController mode="entity" entityName="Depth" automaticallyPreparesContent="YES" id="vaD-x1-Ww0">
                     <connections>
                         <binding destination="5gI-5U-AMq" name="managedObjectContext" keyPath="self.view.window.windowController.document.managedObjectContext" id="cLS-iy-MeR"/>
                     </connections>

@@ -9,16 +9,23 @@
 import CoreData
 extension NSManagedObject {
 
-        // Returns the unqualified class name, i.e. the last component.
-        // Can be overridden in a subclass.
-        class func entityName() -> NSEntityDescription {
-            return self.entity()
-        }
+// updated from https://briancoyner.github.io/2015/08/01/coredata-swift2.html
+    public class func entityName() -> String {
+        // If the data model is in a framework, then
+        // the module name needs to be stripped off.
+        //
+        // Example:
+        //   FooBar.Engine
+        //   Engine
+        let name = NSStringFromClass(self)
+        let result = name.components(separatedBy: ".").last!
+        return result
+    }
 
-        convenience init(context: NSManagedObjectContext) {
+    convenience init(context: NSManagedObjectContext) {
             let eName = type(of: self).entityName()
-//            let entity = NSEntityDescription.entityForName(eName, inManagedObjectContext: context)!
-            self.init(entity: eName, insertInto: context)
+            let entity = NSEntityDescription.entity(forEntityName: eName, in: context)!
+            self.init(entity: entity, insertInto: context)
         }
     }
 

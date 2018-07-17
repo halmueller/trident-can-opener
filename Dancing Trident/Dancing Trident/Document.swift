@@ -29,39 +29,34 @@ class Document: NSPersistentDocument {
     }
 
     @IBAction func importDefaultSSV(_ sender: Any) {
-        defaultSSVURL = URL(fileURLWithPath: "/Users/hal/DevelopmentSandbox/TridentTools/files/data/s_accdce0e-5efc-4db5-8f03-ed7031f78f7f.ssv")
+        defaultSSVURL = URL(fileURLWithPath: "/Users/hal/DevelopmentSandbox/TridentTools/files/data/s_1cd5aee2-dcba-4aea-83af-43272574b5a6.ssv")
 
-        do {
-            let contents = try String(contentsOf: defaultSSVURL!, encoding: String.Encoding.utf8)
-            let lines = contents.split(separator: "\n")
-            for line in lines {
-                let fields = line.split(separator: " ")
-                if let epochSeconds = Double(fields[0]) {
-                    let timestamp = Date(timeIntervalSince1970: epochSeconds)
-                    let name = fields[1]
-                    let value = Double(fields[2]) ?? 0.0
-                    if name == "depth" {
-                        let depth = DepthReading(context: self.managedObjectContext!)
-                        depth.timestamp = timestamp
-                        depth.meters = value
-                        Swift.print(depth)
-                    }
-                    else if name == "temp.water.temperature.temperature_" {
-                        let temperature = WaterTemperatureReading(context: self.managedObjectContext!)
-                        temperature.timestamp = timestamp
-                        temperature.degreesCelsius = value
-                        Swift.print(temperature)
-                    }
-                    else {
-//                        Swift.print(timestamp, name, value)
+        if let moc = managedObjectContext {
+            do {
+                let contents = try String(contentsOf: defaultSSVURL!, encoding: String.Encoding.utf8)
+                let lines = contents.split(separator: "\n")
+                for line in lines {
+                    let fields = line.split(separator: " ")
+                    if let epochSeconds = Double(fields[0]) {
+                        let timestamp = Date(timeIntervalSince1970: epochSeconds)
+                        let name = fields[1]
+                        let value = Double(fields[2]) ?? 0.0
+                        if name == "depth" {
+                            let depth = Depth(timestamp: timestamp, meters: value, context: moc)
+                        }
+                        else if name == "temp.water.temperature.temperature_" {
+                            let temperature = Temperature(timestamp: timestamp, degreesCelsius: value, context: moc)
+                        }
+                        else {
+                            //                        Swift.print(timestamp, name, value)
+                        }
                     }
                 }
+                try self.managedObjectContext?.save()
+            } catch {
+                Swift.print("Didn't work")
             }
-            try self.managedObjectContext?.save()
-        } catch {
-            Swift.print("Didn't work")
         }
-
     }
 
 }
