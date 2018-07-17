@@ -20,15 +20,15 @@
     <entity name="Temperature" representedClassName="Temperature" parentEntity="TimestampedLogEntry" syncable="YES" codeGenerationType="class">
         <attribute name="degreesCelsius" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="TimestampedLogEntry" representedClassName="TimestampedLogEntry" isAbstract="YES" syncable="YES" codeGenerationType="class">
+    <entity name="TimestampedLogEntry" representedClassName="TimestampedLogEntry" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Depth" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="Temperature" positionX="-54" positionY="-9" width="128" height="60"/>
-        <element name="Pressure" positionX="-27" positionY="27" width="128" height="60"/>
         <element name="Attitude" positionX="9" positionY="81" width="128" height="90"/>
+        <element name="Depth" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="Pressure" positionX="-27" positionY="27" width="128" height="60"/>
         <element name="Quaternion" positionX="-18" positionY="72" width="128" height="105"/>
+        <element name="Temperature" positionX="-54" positionY="-9" width="128" height="60"/>
         <element name="TimestampedLogEntry" positionX="-9" positionY="81" width="128" height="60"/>
     </elements>
 </model>

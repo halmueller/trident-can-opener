@@ -26,6 +26,7 @@ class Document: NSPersistentDocument {
         let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
         let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")) as! NSWindowController
         self.addWindowController(windowController)
+        Swift.print(self.windowControllers)
     }
 
     @IBAction func importDefaultSSV(_ sender: Any) {
@@ -37,6 +38,8 @@ class Document: NSPersistentDocument {
                 moc.undoManager = nil
                 let contents = try String(contentsOf: defaultSSVURL!, encoding: String.Encoding.utf8)
                 let lines = contents.split(separator: "\n")
+                let dummyLog = TimestampedLogEntry(context: moc)
+                dummyLog.timestamp = Date()
                 for line in lines {
                     let fields = line.split(separator: " ")
                     if let epochSeconds = Double(fields[0]) {

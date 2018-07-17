@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0A2FE920FDA673003CF226 /* DancerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A2FE720FDA673003CF226 /* DancerViewController.swift */; };
+		2B12510220FD993F0057AB71 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B12510120FD993F0057AB71 /* DataViewController.swift */; };
 		2B23E3AA20F948420079EDAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3A920F948420079EDAE /* AppDelegate.swift */; };
 		2B23E3AC20F948420079EDAE /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3AB20F948420079EDAE /* SummaryViewController.swift */; };
 		2B23E3AE20F948420079EDAE /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3AD20F948420079EDAE /* Document.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B0A2FE720FDA673003CF226 /* DancerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DancerViewController.swift; sourceTree = "<group>"; };
+		2B12510120FD993F0057AB71 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		2B23E3A620F948420079EDAE /* Dancing Trident.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dancing Trident.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B23E3A920F948420079EDAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B23E3AB20F948420079EDAE /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B12510320FD9A4A0057AB71 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				2B23E3AF20F948420079EDAE /* Document.xcdatamodeld */,
+				2B23E3DE20F995DD0079EDAE /* ManagedObject+Insertion.swift */,
+				2B23E3E220FD65AC0079EDAE /* Temperature+Methods.swift */,
+				2B23E3E420FD65D30079EDAE /* Depth+Methods.swift */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		2B23E39D20F948410079EDAE = {
 			isa = PBXGroup;
 			children = (
@@ -109,15 +124,14 @@
 			isa = PBXGroup;
 			children = (
 				2B23E3A920F948420079EDAE /* AppDelegate.swift */,
-				2B23E3AB20F948420079EDAE /* SummaryViewController.swift */,
 				2B23E3AD20F948420079EDAE /* Document.swift */,
-				2B23E3E020FD5F350079EDAE /* Art */,
+				2B23E3AB20F948420079EDAE /* SummaryViewController.swift */,
+				2B12510120FD993F0057AB71 /* DataViewController.swift */,
+				2B0A2FE720FDA673003CF226 /* DancerViewController.swift */,
 				2B23E3B420F948420079EDAE /* Main.storyboard */,
+				2B12510320FD9A4A0057AB71 /* Core Data */,
+				2B23E3E020FD5F350079EDAE /* Art */,
 				2B23E3E120FD5F5C0079EDAE /* Other */,
-				2B23E3AF20F948420079EDAE /* Document.xcdatamodeld */,
-				2B23E3DE20F995DD0079EDAE /* ManagedObject+Insertion.swift */,
-				2B23E3E220FD65AC0079EDAE /* Temperature+Methods.swift */,
-				2B23E3E420FD65D30079EDAE /* Depth+Methods.swift */,
 			);
 			path = "Dancing Trident";
 			sourceTree = "<group>";
@@ -299,6 +313,8 @@
 				2B23E3AC20F948420079EDAE /* SummaryViewController.swift in Sources */,
 				2B23E3DF20F995DD0079EDAE /* ManagedObject+Insertion.swift in Sources */,
 				2B23E3E320FD65AC0079EDAE /* Temperature+Methods.swift in Sources */,
+				2B12510220FD993F0057AB71 /* DataViewController.swift in Sources */,
+				2B0A2FE920FDA673003CF226 /* DancerViewController.swift in Sources */,
 				2B23E3AA20F948420079EDAE /* AppDelegate.swift in Sources */,
 				2B23E3AE20F948420079EDAE /* Document.swift in Sources */,
 			);
