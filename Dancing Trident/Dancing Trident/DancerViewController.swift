@@ -8,17 +8,47 @@
 
 import Cocoa
 import SceneKit
+import CoreData
 
 class DancerViewController: NSViewController {
 
     var managedObjectContext: NSManagedObjectContext? = nil
+    var depthFRC: NSFetchedResultsController<Depth>? = nil
+    var tridentNode: SCNNode? = nil
 
     @IBOutlet weak var scnView: SCNView!
-    
+
     @IBAction func beginReplay(_ sender: Any) {
         print(self.managedObjectContext as Any)
+        let depthFetchRequest = NSFetchRequest<Depth>(entityName: "Depth")
+        let timestampSD = NSSortDescriptor(key: "timestamp", ascending: true)
+        depthFetchRequest.sortDescriptors = [timestampSD]
+        depthFRC = NSFetchedResultsController(fetchRequest: depthFetchRequest, managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: "DancerViewControllerDepth")
+        do {
+            try depthFRC?.performFetch()
+        } catch  {
+            print("depthFRC fetch failed")
+        }
+        try! depthFRC?.performFetch()
+        var position = tridentNode!.position
+        var currentSeconds = depthFRC!.fetchedObjects![0].timestamp!.timeIntervalSince1970
+        var actions: [SCNAction] = []
+        for depth in (depthFRC?.fetchedObjects)! {
+//            print(depth.meters, depth.timestamp)
+            let newSeconds = depth.timestamp!.timeIntervalSince1970
+            let interval = newSeconds - currentSeconds
+            currentSeconds = newSeconds
+            position.y = -1.0 * CGFloat(depth.meters)
+            print(interval, position)
+            let animation = SCNAction.move(to: position, duration: interval)
+            actions.append(animation)
+//            tridentNode.animate
+//            tridentNode!.simdPosition = position
+        }
+        let sequence = SCNAction.sequence(actions)
+        tridentNode?.runAction(sequence)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
@@ -30,7 +60,6 @@ class DancerViewController: NSViewController {
         cameraNode.camera = SCNCamera()
         scene.rootNode.addChildNode(cameraNode)
         cameraNode.camera?.automaticallyAdjustsZRange = true
-        cameraNode.camera?.usesOrthographicProjection = true
 
         // place the camera
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
@@ -52,10 +81,10 @@ class DancerViewController: NSViewController {
         let tridentABCURL = Bundle.main.url(forResource: "art.scnassets/Trident", withExtension: "abc")
         let tridentABC =  SCNSceneSource(url: tridentABCURL!)
         let abcscene = tridentABC?.scene(options: [.convertToYUp: true, .convertUnitsToMeters: true])
-        let tridentNode = (abcscene?.rootNode.childNodes[0])!
+        tridentNode = (abcscene?.rootNode.childNodes[0])!
         // Looks like the units are millimeters? Convert to meters.
-        tridentNode.simdScale = simd_float3(0.001)
-        scene.rootNode.addChildNode(tridentNode)
+        tridentNode!.simdScale = simd_float3(0.001)
+        scene.rootNode.addChildNode(tridentNode!)
 
         // set the scene to the view
         scnView.scene = scene
