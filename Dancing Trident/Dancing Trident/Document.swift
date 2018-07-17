@@ -33,6 +33,8 @@ class Document: NSPersistentDocument {
 
         if let moc = managedObjectContext {
             do {
+                let undoer = moc.undoManager
+                moc.undoManager = nil
                 let contents = try String(contentsOf: defaultSSVURL!, encoding: String.Encoding.utf8)
                 let lines = contents.split(separator: "\n")
                 for line in lines {
@@ -53,6 +55,7 @@ class Document: NSPersistentDocument {
                     }
                 }
                 try self.managedObjectContext?.save()
+                moc.undoManager = undoer
             } catch {
                 Swift.print("Didn't work")
             }

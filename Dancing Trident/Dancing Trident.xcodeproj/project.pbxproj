@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B23E3AA20F948420079EDAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3A920F948420079EDAE /* AppDelegate.swift */; };
-		2B23E3AC20F948420079EDAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3AB20F948420079EDAE /* ViewController.swift */; };
+		2B23E3AC20F948420079EDAE /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3AB20F948420079EDAE /* SummaryViewController.swift */; };
 		2B23E3AE20F948420079EDAE /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3AD20F948420079EDAE /* Document.swift */; };
 		2B23E3B120F948420079EDAE /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3AF20F948420079EDAE /* Document.xcdatamodeld */; };
 		2B23E3B320F948420079EDAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B23E3B220F948420079EDAE /* Assets.xcassets */; };
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		2B23E3A620F948420079EDAE /* Dancing Trident.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dancing Trident.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B23E3A920F948420079EDAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B23E3AB20F948420079EDAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B23E3AB20F948420079EDAE /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		2B23E3AD20F948420079EDAE /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		2B23E3B020F948420079EDAE /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
 		2B23E3B220F948420079EDAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2B23E3A920F948420079EDAE /* AppDelegate.swift */,
-				2B23E3AB20F948420079EDAE /* ViewController.swift */,
+				2B23E3AB20F948420079EDAE /* SummaryViewController.swift */,
 				2B23E3AD20F948420079EDAE /* Document.swift */,
 				2B23E3E020FD5F350079EDAE /* Art */,
 				2B23E3B420F948420079EDAE /* Main.storyboard */,
@@ -296,7 +296,7 @@
 			files = (
 				2B23E3E520FD65D30079EDAE /* Depth+Methods.swift in Sources */,
 				2B23E3B120F948420079EDAE /* Document.xcdatamodeld in Sources */,
-				2B23E3AC20F948420079EDAE /* ViewController.swift in Sources */,
+				2B23E3AC20F948420079EDAE /* SummaryViewController.swift in Sources */,
 				2B23E3DF20F995DD0079EDAE /* ManagedObject+Insertion.swift in Sources */,
 				2B23E3E320FD65AC0079EDAE /* Temperature+Methods.swift in Sources */,
 				2B23E3AA20F948420079EDAE /* AppDelegate.swift in Sources */,
