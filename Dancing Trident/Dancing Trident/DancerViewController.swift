@@ -16,7 +16,7 @@ class DancerViewController: NSViewController {
     var depthFRC: NSFetchedResultsController<Depth>? = nil
     var attitudeFRC: NSFetchedResultsController<Attitude>? = nil
     var quaternionFRC: NSFetchedResultsController<Quaternion>? = nil
-    var tridentNode: SCNNode? = nil
+    var vehicleNode: SCNNode? = nil
 
     @IBOutlet weak var scnView: SCNView!
 
@@ -51,7 +51,7 @@ class DancerViewController: NSViewController {
             print("quaternionFRC fetch failed")
         }
 
-        var position = tridentNode!.position
+        var position = vehicleNode!.position
         var currentSeconds = depthFRC!.fetchedObjects![0].timestamp!.timeIntervalSince1970
         var depthActions: [SCNAction] = []
         for depth in (depthFRC?.fetchedObjects)! {
@@ -99,53 +99,24 @@ class DancerViewController: NSViewController {
         let quaternionsSequence = SCNAction.sequence(quaternionActions)
 
         let group = SCNAction.group([depthsSequence, attitudesSequence])
-        tridentNode?.runAction(group)
+        vehicleNode?.runAction(group)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
 
-        let scene = SCNScene()
-
-        // create and add a camera to the scene
-        let cameraNode = SCNNode()
-        cameraNode.camera = SCNCamera()
-        scene.rootNode.addChildNode(cameraNode)
-        cameraNode.camera?.automaticallyAdjustsZRange = true
-
-        // place the camera
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
-
-        // create and add a light to the scene
-        let lightNode = SCNNode()
-        lightNode.light = SCNLight()
-        lightNode.light!.type = .omni
-        lightNode.position = SCNVector3(x: 0, y: 10, z: 10)
-        scene.rootNode.addChildNode(lightNode)
-
-        // create and add an ambient light to the scene
-        let ambientLightNode = SCNNode()
-        ambientLightNode.light = SCNLight()
-        ambientLightNode.light!.type = .ambient
-        ambientLightNode.light!.color = NSColor.darkGray
-        scene.rootNode.addChildNode(ambientLightNode)
+        let scene = SCNScene.standardScene()
 
         let useGizmo = false
         if useGizmo {
-            let tridentABCURL = Bundle.main.url(forResource: "art.scnassets/Trident", withExtension: "abc")
-            let tridentABC =  SCNSceneSource(url: tridentABCURL!)
-            let abcscene = tridentABC?.scene(options: [.convertToYUp: true, .convertUnitsToMeters: true])
-            tridentNode = (abcscene?.rootNode.childNodes[0])!
-            // Looks like the units are millimeters? Convert to meters.
-            tridentNode!.simdScale = simd_float3(0.001)
+            vehicleNode = SCNNode.tridentNode()
         }
         else {
-            let gizmoNode = GizmoNode()
-            tridentNode = gizmoNode
+            vehicleNode = SCNNode.gizmoNode()
         }
 
-        scene.rootNode.addChildNode(tridentNode!)
+        scene.rootNode.addChildNode(vehicleNode!)
 
         // set the scene to the view
         scnView.scene = scene
@@ -161,7 +132,7 @@ class DancerViewController: NSViewController {
         //        scnView.debugOptions = [SCNDebugOptions.renderAsWireframe]
 
         // configure the view
-        scnView.backgroundColor = NSColor.black
+        scnView.backgroundColor = NSColor.clear
     }
     
 }

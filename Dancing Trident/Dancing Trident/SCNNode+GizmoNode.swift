@@ -1,10 +1,10 @@
 import SceneKit
 import SpriteKit
 
-public class GizmoNode: SCNNode {
-	
-	required public override init() {
-		super.init()
+extension SCNNode {
+    class func gizmoNode() -> SCNNode {
+        let result = SCNNode()
+
 		let axisLength = CGFloat(3.0)
 		let offset = CGFloat(axisLength/2.0)
 		let axisSide = CGFloat(0.2)
@@ -22,16 +22,14 @@ public class GizmoNode: SCNNode {
         let xNode = SCNNode(geometry: xBox)
 		let yNode = SCNNode(geometry: yBox)
 		let zNode = SCNNode(geometry: zBox)
-		self.addChildNode(xNode)
-		self.addChildNode(yNode)
-		self.addChildNode(zNode)
+		result.addChildNode(xNode)
+		result.addChildNode(yNode)
+		result.addChildNode(zNode)
 		xNode.position.x = offset
 		yNode.position.y = offset
 		zNode.position.z = offset
-	}
-	
-	required public init?(coder aDecoder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
+
+        return result
 	}
 }
 

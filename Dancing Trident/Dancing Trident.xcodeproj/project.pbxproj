@@ -22,8 +22,10 @@
 		2B23E3DF20F995DD0079EDAE /* ManagedObject+Insertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3DE20F995DD0079EDAE /* ManagedObject+Insertion.swift */; };
 		2B23E3E320FD65AC0079EDAE /* Temperature+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3E220FD65AC0079EDAE /* Temperature+Methods.swift */; };
 		2B23E3E520FD65D30079EDAE /* Depth+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E3E420FD65D30079EDAE /* Depth+Methods.swift */; };
-		2B99195A2107A5F200B5580C /* Gizmo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9919592107A5F200B5580C /* Gizmo.swift */; };
+		2B99195A2107A5F200B5580C /* SCNNode+GizmoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9919592107A5F200B5580C /* SCNNode+GizmoNode.swift */; };
 		2B99195C2107AC8C00B5580C /* Quaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99195B2107AC8C00B5580C /* Quaternion.swift */; };
+		2B99195E210928F500B5580C /* SCNNode+TridentNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99195D210928F500B5580C /* SCNNode+TridentNode.swift */; };
+		2B99196021092C3100B5580C /* SCNScene+StandardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99195F21092C3100B5580C /* SCNScene+StandardScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +68,10 @@
 		2B23E3DE20F995DD0079EDAE /* ManagedObject+Insertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedObject+Insertion.swift"; sourceTree = "<group>"; };
 		2B23E3E220FD65AC0079EDAE /* Temperature+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Temperature+Methods.swift"; sourceTree = "<group>"; };
 		2B23E3E420FD65D30079EDAE /* Depth+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Depth+Methods.swift"; sourceTree = "<group>"; };
-		2B9919592107A5F200B5580C /* Gizmo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gizmo.swift; sourceTree = "<group>"; };
+		2B9919592107A5F200B5580C /* SCNNode+GizmoNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+GizmoNode.swift"; sourceTree = "<group>"; };
 		2B99195B2107AC8C00B5580C /* Quaternion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quaternion.swift; sourceTree = "<group>"; };
+		2B99195D210928F500B5580C /* SCNNode+TridentNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+TridentNode.swift"; sourceTree = "<group>"; };
+		2B99195F21092C3100B5580C /* SCNScene+StandardScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNScene+StandardScene.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +140,9 @@
 				2B23E3AB20F948420079EDAE /* SummaryViewController.swift */,
 				2B12510120FD993F0057AB71 /* DataViewController.swift */,
 				2B0A2FE720FDA673003CF226 /* DancerViewController.swift */,
-				2B9919592107A5F200B5580C /* Gizmo.swift */,
+				2B99195F21092C3100B5580C /* SCNScene+StandardScene.swift */,
+				2B9919592107A5F200B5580C /* SCNNode+GizmoNode.swift */,
+				2B99195D210928F500B5580C /* SCNNode+TridentNode.swift */,
 				2B23E3B420F948420079EDAE /* Main.storyboard */,
 				2B12510320FD9A4A0057AB71 /* Core Data */,
 				2B23E3E020FD5F350079EDAE /* Art */,
@@ -327,7 +333,9 @@
 				2B0A2FE920FDA673003CF226 /* DancerViewController.swift in Sources */,
 				2B23E3AA20F948420079EDAE /* AppDelegate.swift in Sources */,
 				2B99195C2107AC8C00B5580C /* Quaternion.swift in Sources */,
-				2B99195A2107A5F200B5580C /* Gizmo.swift in Sources */,
+				2B99195E210928F500B5580C /* SCNNode+TridentNode.swift in Sources */,
+				2B99196021092C3100B5580C /* SCNScene+StandardScene.swift in Sources */,
+				2B99195A2107A5F200B5580C /* SCNNode+GizmoNode.swift in Sources */,
 				2B23E3AE20F948420079EDAE /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
