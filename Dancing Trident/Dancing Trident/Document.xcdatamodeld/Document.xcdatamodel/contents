@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Attitude" representedClassName="Attitude" parentEntity="TimestampedLogEntry" syncable="YES" codeGenerationType="class">
-        <attribute name="pitch" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="roll" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="yaw" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pitchDegrees" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rollDegrees" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="yawDegrees" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Depth" representedClassName="Depth" parentEntity="TimestampedLogEntry" syncable="YES" codeGenerationType="class">
         <attribute name="meters" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -11,7 +11,7 @@
     <entity name="Pressure" representedClassName="Pressure" parentEntity="TimestampedLogEntry" syncable="YES" codeGenerationType="class">
         <attribute name="degreesCelsius" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="Quaternion" representedClassName="WaterTemperatureReading" parentEntity="TimestampedLogEntry" syncable="YES" codeGenerationType="class">
+    <entity name="Quaternion" representedClassName="Quaternion" parentEntity="TimestampedLogEntry" syncable="YES" codeGenerationType="class">
         <attribute name="w" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="x" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="y" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>

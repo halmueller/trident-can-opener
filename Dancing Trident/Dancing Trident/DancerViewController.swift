@@ -15,6 +15,7 @@ class DancerViewController: NSViewController {
     var managedObjectContext: NSManagedObjectContext? = nil
     var depthFRC: NSFetchedResultsController<Depth>? = nil
     var attitudeFRC: NSFetchedResultsController<Attitude>? = nil
+    var quaternionFRC: NSFetchedResultsController<Quaternion>? = nil
     var tridentNode: SCNNode? = nil
 
     @IBOutlet weak var scnView: SCNView!
@@ -23,6 +24,7 @@ class DancerViewController: NSViewController {
         print(self.managedObjectContext as Any)
         let depthFetchRequest = NSFetchRequest<Depth>(entityName: "Depth")
         let attitudeFetchRequest = NSFetchRequest<Attitude>(entityName: "Attitude")
+        let quaternionFetchRequest = NSFetchRequest<Quaternion>(entityName: "Quaternion")
         let timestampSD = NSSortDescriptor(key: "timestamp", ascending: true)
 
         depthFetchRequest.sortDescriptors = [timestampSD]
@@ -39,6 +41,14 @@ class DancerViewController: NSViewController {
             try attitudeFRC?.performFetch()
         } catch  {
             print("attitudeFRC fetch failed")
+        }
+
+        quaternionFetchRequest.sortDescriptors = [timestampSD]
+        quaternionFRC = NSFetchedResultsController(fetchRequest: quaternionFetchRequest, managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: "DancerViewControllerQuaternion")
+        do {
+            try quaternionFRC?.performFetch()
+        } catch  {
+            print("quaternionFRC fetch failed")
         }
 
         var position = tridentNode!.position
@@ -64,10 +74,29 @@ class DancerViewController: NSViewController {
             let interval = newSeconds - currentSeconds
             currentSeconds = newSeconds
             print(interval, attitude)
-            let animation = SCNAction.rotateTo(x: CGFloat(attitude.roll), y: CGFloat(attitude.yaw), z: CGFloat(attitude.pitch), duration: interval, usesShortestUnitArc: true)
+
+            let animation = SCNAction.rotateTo(x: CGFloat(attitude.scenekitPitchRadians()),
+                                               y: CGFloat(attitude.scenekitYawRadians()),
+                                               z: 0.0, //CGFloat(attitude.scenekitRollRadians()),
+                                               duration: interval, usesShortestUnitArc: true)
             attitudeActions.append(animation)
         }
         let attitudesSequence = SCNAction.sequence(attitudeActions)
+
+        currentSeconds = quaternionFRC!.fetchedObjects![0].timestamp!.timeIntervalSince1970
+        var quaternionActions: [SCNAction] = []
+        for quaternion in (quaternionFRC?.fetchedObjects)! {
+            //            print(depth.meters, depth.timestamp)
+            let newSeconds = quaternion.timestamp!.timeIntervalSince1970
+            let interval = newSeconds - currentSeconds
+            currentSeconds = newSeconds
+            print(interval, quaternion)
+
+//            let animation = SCNAction.quat
+//                duration: interval, usesShortestUnitArc: true)
+//            quaternionActions.append(animation)
+        }
+        let quaternionsSequence = SCNAction.sequence(quaternionActions)
 
         let group = SCNAction.group([depthsSequence, attitudesSequence])
         tridentNode?.runAction(group)
@@ -102,12 +131,20 @@ class DancerViewController: NSViewController {
         ambientLightNode.light!.color = NSColor.darkGray
         scene.rootNode.addChildNode(ambientLightNode)
 
-        let tridentABCURL = Bundle.main.url(forResource: "art.scnassets/Trident", withExtension: "abc")
-        let tridentABC =  SCNSceneSource(url: tridentABCURL!)
-        let abcscene = tridentABC?.scene(options: [.convertToYUp: true, .convertUnitsToMeters: true])
-        tridentNode = (abcscene?.rootNode.childNodes[0])!
-        // Looks like the units are millimeters? Convert to meters.
-        tridentNode!.simdScale = simd_float3(0.001)
+        let useGizmo = false
+        if useGizmo {
+            let tridentABCURL = Bundle.main.url(forResource: "art.scnassets/Trident", withExtension: "abc")
+            let tridentABC =  SCNSceneSource(url: tridentABCURL!)
+            let abcscene = tridentABC?.scene(options: [.convertToYUp: true, .convertUnitsToMeters: true])
+            tridentNode = (abcscene?.rootNode.childNodes[0])!
+            // Looks like the units are millimeters? Convert to meters.
+            tridentNode!.simdScale = simd_float3(0.001)
+        }
+        else {
+            let gizmoNode = GizmoNode()
+            tridentNode = gizmoNode
+        }
+
         scene.rootNode.addChildNode(tridentNode!)
 
         // set the scene to the view

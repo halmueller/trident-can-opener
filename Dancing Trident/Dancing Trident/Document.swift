@@ -33,7 +33,7 @@ class Document: NSPersistentDocument {
 
      override func addWindowController(_ windowController: NSWindowController) {
         super.addWindowController(windowController)
-        Swift.print(windowController.contentViewController)
+        Swift.print(windowController.contentViewController!)
         for childVC in windowController.contentViewController!.childViewControllers {
             if let summaryVC = childVC as? SummaryViewController {
                 summaryVC.managedObjectContext = self.managedObjectContext
@@ -49,7 +49,7 @@ class Document: NSPersistentDocument {
     }
     
     @IBAction func importDefaultSSV(_ sender: Any) {
-        defaultSSVURL = URL(fileURLWithPath: "/Users/hal/DevelopmentSandbox/TridentTools/files/data/s_1cd5aee2-dcba-4aea-83af-43272574b5a6.ssv")
+        defaultSSVURL = URL(fileURLWithPath: "/Users/hal/DevelopmentSandbox/TridentTools/trident-hacks/samples/Trident-Jul-18-185925.ssv")
 
         if let moc = managedObjectContext {
             do {
@@ -60,6 +60,7 @@ class Document: NSPersistentDocument {
                 let dummyLog = TimestampedLogEntry(context: moc)
                 dummyLog.timestamp = Date()
                 var currentAttitude: Attitude? = nil
+                var currentQuaternion: Quaternion? = nil
                 for line in lines {
                     let fields = line.split(separator: " ")
                     if let epochSeconds = Double(fields[0]) {
@@ -67,10 +68,10 @@ class Document: NSPersistentDocument {
                         let name = fields[1]
                         let value = Double(fields[2]) ?? 0.0
                         if name == "depth" {
-                            let depth = Depth(timestamp: timestamp, meters: value, context: moc)
+                            let _ = Depth(timestamp: timestamp, meters: value, context: moc)
                         }
                         else if name == "temp.water.temperature.temperature_" {
-                            let temperature = Temperature(timestamp: timestamp, degreesCelsius: value, context: moc)
+                            let _ = Temperature(timestamp: timestamp, degreesCelsius: value, context: moc)
                         }
                         else if name.hasPrefix("attitude.calc.") {
                             if currentAttitude == nil ||
@@ -80,14 +81,33 @@ class Document: NSPersistentDocument {
 
                             // update
                             if name == "attitude.calc.pitch" {
-                                currentAttitude!.pitch = value
+                                currentAttitude!.pitchDegrees = value
                             }
                             else if name == "attitude.calc.roll" {
-                                currentAttitude!.roll = value
+                                currentAttitude!.rollDegrees = value
                             }
                             else if name == "attitude.calc.yaw" {
-                                currentAttitude!.yaw = value
+                                currentAttitude!.yawDegrees = value
                             }
+                        }
+                        else if name.hasPrefix("attitude.orientation") {
+                            if currentQuaternion == nil ||
+                                currentQuaternion!.timestamp != timestamp {
+                                currentQuaternion = Quaternion(timestamp: timestamp, context: moc)
+                            }
+                            if name == "attitude.orientation.w" {
+                                currentQuaternion!.w = value
+                            }
+                            else if name == "attitude.orientation.x" {
+                                currentQuaternion!.x = value
+                            }
+                            else if name == "attitude.orientation.y" {
+                                currentQuaternion!.y = value
+                            }
+                            else if name == "attitude.orientation.z" {
+                                currentQuaternion!.z = value
+                            }
+
                         }
                         else {
                             //                        Swift.print(timestamp, name, value)

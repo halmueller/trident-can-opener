@@ -12,12 +12,24 @@ extension Attitude {
     convenience init(timestamp: Date, pitch: Double, roll: Double, yaw: Double, context: NSManagedObjectContext) {
         self.init(context: context)
         self.timestamp = timestamp
-        self.pitch = pitch
-        self.roll = roll
-        self.yaw = yaw
+        self.pitchDegrees = pitch
+        self.rollDegrees = roll
+        self.yawDegrees = yaw
     }
     convenience init(timestamp: Date, context: NSManagedObjectContext) {
         self.init(context: context)
         self.timestamp = timestamp
+    }
+
+    func scenekitPitchRadians() -> Double {
+        return pitchDegrees * Double.pi / 180.0
+    }
+
+    func scenekitYawRadians() -> Double {
+        return yawDegrees * Double.pi / 180.0
+    }
+
+    func scenekitRollRadians() -> Double {
+        return rollDegrees * Double.pi / 180.0
     }
 }

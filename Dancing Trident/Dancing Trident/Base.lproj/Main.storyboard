@@ -944,8 +944,8 @@
                                 <rect key="frame" x="0.0" y="31" width="450" height="269"/>
                             </sceneView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aLv-WQ-nUD">
-                                <rect key="frame" x="52" y="-1" width="58" height="32"/>
-                                <buttonCell key="cell" type="push" title="Go" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="exE-7s-8YE">
+                                <rect key="frame" x="52" y="-1" width="90" height="32"/>
+                                <buttonCell key="cell" type="push" title="Animate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="exE-7s-8YE">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
