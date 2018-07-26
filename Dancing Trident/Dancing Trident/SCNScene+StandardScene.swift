@@ -19,7 +19,7 @@ extension SCNScene {
         cameraNode.camera?.automaticallyAdjustsZRange = true
 
         // place the camera
-        cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
+        cameraNode.position = SCNVector3(x: 0, y: -2, z: 10)
 
         // create and add a light to the scene
         let lightNode = SCNNode()

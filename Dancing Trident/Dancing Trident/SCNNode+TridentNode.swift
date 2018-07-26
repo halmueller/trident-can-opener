@@ -17,6 +17,13 @@ extension SCNNode {
         tridentNode = (abcscene?.rootNode.childNodes[0])!
         // Looks like the units are millimeters? Convert to meters.
         tridentNode.simdScale = simd_float3(0.001)
+
+        print(tridentNode.boundingBox)
+        print(tridentNode.pivot)
+        tridentNode.pivot = SCNMatrix4MakeTranslation(0.0, 0.0, -0.5)
+        print(tridentNode.pivot)
+        print(tridentNode.boundingBox)
+
         return tridentNode
     }
 }

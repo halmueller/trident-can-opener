@@ -706,12 +706,13 @@
         <!--Tab View Controller-->
         <scene sceneID="2GY-jF-XvN">
             <objects>
-                <tabViewController id="h1N-LT-BIL" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="4" id="h1N-LT-BIL" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem id="GVn-77-BgZ"/>
                         <tabViewItem id="nPd-K2-hXP"/>
                         <tabViewItem id="lAW-GA-aTO"/>
                         <tabViewItem id="cpW-ac-2lQ"/>
+                        <tabViewItem id="xNo-tX-2Zx"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="AVw-2N-BLu">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -727,6 +728,7 @@
                         <segue destination="5gI-5U-AMq" kind="relationship" relationship="tabItems" id="oCQ-AI-0q0"/>
                         <segue destination="p4X-ei-V5a" kind="relationship" relationship="tabItems" id="Xyb-wr-PP6"/>
                         <segue destination="5mA-42-gIN" kind="relationship" relationship="tabItems" id="0Lj-TI-IEt"/>
+                        <segue destination="xRT-GH-Qcb" kind="relationship" relationship="tabItems" id="X3b-gO-Tf5"/>
                     </connections>
                 </tabViewController>
                 <customObject id="Z2D-Qc-agg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1060,6 +1062,179 @@
                 <userDefaultsController id="NjU-rv-dHr"/>
             </objects>
             <point key="canvasLocation" x="886" y="1089"/>
+        </scene>
+        <!--Preview-->
+        <scene sceneID="wMj-zB-RmD">
+            <objects>
+                <viewController title="Preview" id="xRT-GH-Qcb" customClass="PreviewViewController" customModule="Dancing_Trident" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="QQf-O1-LeW">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <sceneView translatesAutoresizingMaskIntoConstraints="NO" id="l29-gf-jQy">
+                                <rect key="frame" x="0.0" y="96" width="450" height="204"/>
+                            </sceneView>
+                            <box autoresizesSubviews="NO" borderType="line" title="Yaw" translatesAutoresizingMaskIntoConstraints="NO" id="hVd-Kv-WjS">
+                                <rect key="frame" x="17" y="7" width="134" height="81"/>
+                                <view key="contentView" id="29e-C8-5L2">
+                                    <rect key="frame" x="1" y="1" width="132" height="65"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EDi-SD-hU4">
+                                            <rect key="frame" x="18" y="9" width="96" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="92" id="Czs-hP-Vaj"/>
+                                            </constraints>
+                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="-180" maxValue="180" tickMarkPosition="above" sliderType="linear" id="ZYX-S6-hNC"/>
+                                            <connections>
+                                                <binding destination="xRT-GH-Qcb" name="value" keyPath="self.yawDegrees" id="3II-km-k1Z"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="60g-uB-3sf">
+                                            <rect key="frame" x="20" y="34" width="54" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="54" id="gmt-NR-x8H"/>
+                                            </constraints>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="DVb-FY-sgq">
+                                                <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="hhZ-LN-DSs"/>
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="xRT-GH-Qcb" name="value" keyPath="self.yawDegrees" id="0T6-3Z-6Ay"/>
+                                                <outlet property="nextKeyView" destination="feE-6q-8h3" id="hWB-WA-Q8t"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="60g-uB-3sf" firstAttribute="leading" secondItem="29e-C8-5L2" secondAttribute="leading" constant="20" symbolic="YES" id="9B8-6a-e3z"/>
+                                        <constraint firstItem="60g-uB-3sf" firstAttribute="leading" secondItem="EDi-SD-hU4" secondAttribute="leading" id="bfq-4e-WF0"/>
+                                        <constraint firstAttribute="bottom" secondItem="EDi-SD-hU4" secondAttribute="bottom" constant="11" id="fav-Dz-MWG"/>
+                                        <constraint firstItem="EDi-SD-hU4" firstAttribute="top" secondItem="60g-uB-3sf" secondAttribute="bottom" constant="8" symbolic="YES" id="oLF-wB-Swd"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="cbS-kj-qfb"/>
+                                    <constraint firstAttribute="width" constant="128" id="vvd-vH-tas"/>
+                                </constraints>
+                            </box>
+                            <box autoresizesSubviews="NO" borderType="line" title="Pitch" translatesAutoresizingMaskIntoConstraints="NO" id="ocY-Gj-M9g">
+                                <rect key="frame" x="158" y="7" width="134" height="81"/>
+                                <view key="contentView" id="xEQ-Yz-MEL">
+                                    <rect key="frame" x="1" y="1" width="132" height="65"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="trJ-hM-dNd">
+                                            <rect key="frame" x="18" y="9" width="96" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="92" id="3d1-XK-4lU"/>
+                                            </constraints>
+                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="-180" maxValue="180" tickMarkPosition="above" sliderType="linear" id="H5S-vP-uLv"/>
+                                            <connections>
+                                                <binding destination="xRT-GH-Qcb" name="value" keyPath="self.pitchDegrees" id="7qm-3V-QBc"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="feE-6q-8h3">
+                                            <rect key="frame" x="20" y="34" width="54" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="54" id="WfL-kT-ZEr"/>
+                                            </constraints>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="LCf-IH-R7L">
+                                                <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="kZz-Cg-p90"/>
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="xRT-GH-Qcb" name="value" keyPath="self.pitchDegrees" id="ykf-Zv-Bi7"/>
+                                                <outlet property="nextKeyView" destination="dYZ-ZF-DpT" id="rJZ-S0-Yqw"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="feE-6q-8h3" firstAttribute="leading" secondItem="xEQ-Yz-MEL" secondAttribute="leading" constant="20" symbolic="YES" id="SNd-JQ-37h"/>
+                                        <constraint firstAttribute="bottom" secondItem="trJ-hM-dNd" secondAttribute="bottom" constant="11" id="dad-px-R8Q"/>
+                                        <constraint firstItem="feE-6q-8h3" firstAttribute="leading" secondItem="trJ-hM-dNd" secondAttribute="leading" id="fJw-DH-Yxi"/>
+                                        <constraint firstItem="trJ-hM-dNd" firstAttribute="top" secondItem="feE-6q-8h3" secondAttribute="bottom" constant="8" symbolic="YES" id="ymJ-7c-lcS"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="Dqx-Hs-uz2"/>
+                                    <constraint firstAttribute="height" constant="77" id="HOZ-7k-Due"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="77" id="YW1-oq-LvR"/>
+                                    <constraint firstAttribute="width" constant="128" id="abn-Km-oyT"/>
+                                </constraints>
+                            </box>
+                            <box autoresizesSubviews="NO" borderType="line" title="Roll" translatesAutoresizingMaskIntoConstraints="NO" id="1us-HW-hcj">
+                                <rect key="frame" x="299" y="7" width="134" height="81"/>
+                                <view key="contentView" id="JOy-Qv-tuf">
+                                    <rect key="frame" x="1" y="1" width="132" height="65"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ybP-Up-cPe">
+                                            <rect key="frame" x="18" y="9" width="96" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="92" id="wyW-jE-1da"/>
+                                            </constraints>
+                                            <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="-180" maxValue="180" tickMarkPosition="above" sliderType="linear" id="cT3-dM-bKA"/>
+                                            <connections>
+                                                <binding destination="xRT-GH-Qcb" name="value" keyPath="self.rollDegrees" id="kR1-fk-4mr"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dYZ-ZF-DpT">
+                                            <rect key="frame" x="20" y="34" width="54" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="54" id="Vfv-B7-MbQ"/>
+                                            </constraints>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="0YO-hG-squ">
+                                                <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="Dfz-UA-leH"/>
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="xRT-GH-Qcb" name="value" keyPath="self.rollDegrees" id="nPc-hM-iRg"/>
+                                                <outlet property="nextKeyView" destination="60g-uB-3sf" id="cCq-Te-7G6"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ybP-Up-cPe" firstAttribute="top" secondItem="dYZ-ZF-DpT" secondAttribute="bottom" constant="8" symbolic="YES" id="Iur-0l-3x3"/>
+                                        <constraint firstItem="dYZ-ZF-DpT" firstAttribute="leading" secondItem="ybP-Up-cPe" secondAttribute="leading" id="TDQ-9W-zJo"/>
+                                        <constraint firstAttribute="bottom" secondItem="ybP-Up-cPe" secondAttribute="bottom" constant="11" id="rJR-kB-zgF"/>
+                                        <constraint firstItem="dYZ-ZF-DpT" firstAttribute="leading" secondItem="JOy-Qv-tuf" secondAttribute="leading" constant="20" symbolic="YES" id="wR8-3c-Ntt"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="NOG-iC-kao"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="WmF-qy-jkz"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="77" id="iqZ-p6-9BX"/>
+                                    <constraint firstAttribute="height" constant="77" id="xXG-MZ-xxH"/>
+                                </constraints>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hVd-Kv-WjS" firstAttribute="top" secondItem="l29-gf-jQy" secondAttribute="bottom" constant="8" symbolic="YES" id="202-3h-vAO"/>
+                            <constraint firstAttribute="bottom" secondItem="l29-gf-jQy" secondAttribute="bottom" constant="96" id="5EZ-wf-aCN"/>
+                            <constraint firstItem="hVd-Kv-WjS" firstAttribute="leading" secondItem="QQf-O1-LeW" secondAttribute="leading" constant="20" symbolic="YES" id="Hjz-7s-1pj"/>
+                            <constraint firstItem="l29-gf-jQy" firstAttribute="top" secondItem="QQf-O1-LeW" secondAttribute="top" id="QGj-Nk-I0b"/>
+                            <constraint firstItem="l29-gf-jQy" firstAttribute="leading" secondItem="QQf-O1-LeW" secondAttribute="leading" id="Tkt-RG-RhJ"/>
+                            <constraint firstAttribute="bottom" secondItem="ocY-Gj-M9g" secondAttribute="bottom" constant="11" id="h39-IZ-JOE"/>
+                            <constraint firstItem="ocY-Gj-M9g" firstAttribute="leading" secondItem="hVd-Kv-WjS" secondAttribute="trailing" constant="13" id="ld6-zD-fHZ"/>
+                            <constraint firstAttribute="bottom" secondItem="1us-HW-hcj" secondAttribute="bottom" constant="11" id="mMC-Mi-htC"/>
+                            <constraint firstAttribute="bottom" secondItem="hVd-Kv-WjS" secondAttribute="bottom" constant="11" id="rag-8s-NU5"/>
+                            <constraint firstItem="1us-HW-hcj" firstAttribute="leading" secondItem="ocY-Gj-M9g" secondAttribute="trailing" constant="13" id="t5z-3F-kNc"/>
+                            <constraint firstAttribute="trailing" secondItem="l29-gf-jQy" secondAttribute="trailing" id="zTZ-M9-iG8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scnView" destination="l29-gf-jQy" id="1Xe-fQ-Lyd"/>
+                    </connections>
+                </viewController>
+                <customObject id="iFn-wd-z5W" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="z2e-2h-nRT"/>
+            </objects>
         </scene>
     </scenes>
 </document>

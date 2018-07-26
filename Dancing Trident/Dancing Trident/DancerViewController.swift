@@ -96,7 +96,7 @@ class DancerViewController: NSViewController {
 //                duration: interval, usesShortestUnitArc: true)
 //            quaternionActions.append(animation)
         }
-        let quaternionsSequence = SCNAction.sequence(quaternionActions)
+//        let quaternionsSequence = SCNAction.sequence(quaternionActions)
 
         let group = SCNAction.group([depthsSequence, attitudesSequence])
         vehicleNode?.runAction(group)
@@ -113,7 +113,7 @@ class DancerViewController: NSViewController {
             vehicleNode = SCNNode.tridentNode()
         }
         else {
-            vehicleNode = SCNNode.gizmoNode()
+            vehicleNode = SCNNode.gizmoNode(2.0)
         }
 
         scene.rootNode.addChildNode(vehicleNode!)
