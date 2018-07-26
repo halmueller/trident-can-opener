@@ -9,6 +9,7 @@
 import Cocoa
 import SceneKit
 import CoreData
+import SpriteKit
 
 class DancerViewController: NSViewController {
 
@@ -141,6 +142,9 @@ class DancerViewController: NSViewController {
 
         // configure the view
         scnView.backgroundColor = NSColor.clear
+
+        let overlayScene = SKScene(fileNamed: "art.scnassets/InformationOverlayScene.sks")
+//        scnView.overlaySKScene = overlayScene
     }
     
 }
