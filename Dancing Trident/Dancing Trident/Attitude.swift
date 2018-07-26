@@ -21,15 +21,33 @@ extension Attitude {
         self.timestamp = timestamp
     }
 
+/*
+     let animation = SCNAction.rotateTo(x: CGFloat(attitude.scenekitPitchRadians()),
+     y: CGFloat(attitude.scenekitYawRadians()),
+     z: 0.0, //CGFloat(attitude.scenekitRollRadians()),
+ */
+
+    class func scenekitPitchRadians(_ pitchDegrees: Double) -> Double {
+        return -1.0 * pitchDegrees * Double.pi / 180.0
+    }
+
+    class func scenekitYawRadians(_ yawDegrees: Double) -> Double {
+        return -1.0 * yawDegrees * Double.pi / 180.0
+    }
+
+    class func scenekitRollRadians(_ rollDegrees: Double) -> Double {
+        return rollDegrees * Double.pi / 180.0
+    }
+
     func scenekitPitchRadians() -> Double {
-        return pitchDegrees * Double.pi / 180.0
+        return Attitude.scenekitPitchRadians(self.pitchDegrees)
     }
 
     func scenekitYawRadians() -> Double {
-        return yawDegrees * Double.pi / 180.0
+        return Attitude.scenekitYawRadians(self.yawDegrees)
     }
 
     func scenekitRollRadians() -> Double {
-        return rollDegrees * Double.pi / 180.0
+        return Attitude.scenekitRollRadians(self.rollDegrees)
     }
 }

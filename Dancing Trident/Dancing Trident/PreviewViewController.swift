@@ -66,6 +66,8 @@ class PreviewViewController: NSViewController {
     }
 
     func adjustVehicleAttitude() {
-        vehicleNode?.eulerAngles = SCNVector3(pitchDegrees * Double.pi/180.0, yawDegrees * Double.pi/180.0, rollDegrees * Double.pi/180.0)
+        vehicleNode?.eulerAngles = SCNVector3(Attitude.scenekitPitchRadians(pitchDegrees),
+                                              Attitude.scenekitYawRadians(yawDegrees),
+                                              Attitude.scenekitRollRadians(rollDegrees))
     }
 }

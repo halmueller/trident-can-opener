@@ -17,10 +17,24 @@ class DancerViewController: NSViewController {
     var attitudeFRC: NSFetchedResultsController<Attitude>? = nil
     var quaternionFRC: NSFetchedResultsController<Quaternion>? = nil
     var vehicleNode: SCNNode? = nil
+    @objc var useGizmo = false {
+        didSet {
+            if useGizmo {
+                vehicleNode = gizmoNode
+            }
+            else {
+                vehicleNode = tridentNode
+            }
+        }
+    }
+    let gizmoNode = SCNNode.gizmoNode(0.5)
+    let tridentNode = SCNNode.tridentNode()
 
     @IBOutlet weak var scnView: SCNView!
 
     @IBAction func beginReplay(_ sender: Any) {
+        vehicleNode?.removeAllActions()
+        
         print(self.managedObjectContext as Any)
         let depthFetchRequest = NSFetchRequest<Depth>(entityName: "Depth")
         let attitudeFetchRequest = NSFetchRequest<Attitude>(entityName: "Attitude")
@@ -77,7 +91,7 @@ class DancerViewController: NSViewController {
 
             let animation = SCNAction.rotateTo(x: CGFloat(attitude.scenekitPitchRadians()),
                                                y: CGFloat(attitude.scenekitYawRadians()),
-                                               z: 0.0, //CGFloat(attitude.scenekitRollRadians()),
+                                               z: CGFloat(attitude.scenekitRollRadians()),
                                                duration: interval, usesShortestUnitArc: true)
             attitudeActions.append(animation)
         }
@@ -108,13 +122,7 @@ class DancerViewController: NSViewController {
 
         let scene = SCNScene.standardScene()
 
-        let useGizmo = false
-        if useGizmo {
-            vehicleNode = SCNNode.tridentNode()
-        }
-        else {
-            vehicleNode = SCNNode.gizmoNode(2.0)
-        }
+        useGizmo = false
 
         scene.rootNode.addChildNode(vehicleNode!)
 
